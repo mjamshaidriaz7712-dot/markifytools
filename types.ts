@@ -4,5 +4,6 @@ export interface Tool {
   title: string;
   description: string;
   link: string;
-  icon: React.ReactElement;
+  // Fix: Specify that the icon can receive a className prop to allow styling with React.cloneElement.
+  icon: React.ReactElement<{ className?: string }>;
 }

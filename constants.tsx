@@ -155,4 +155,19 @@ We only retain collected information for as long as necessary to provide you wit
 We don’t share any personally identifying information publicly or with third-parties, except when required to by law.
 Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.
 You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.
-Your continued use of our website will be regarded as acceptance of our practices around
+Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.`;
+
+export const TERMS_OF_SERVICE = `Last updated: ${new Date().toLocaleDateString()}
+By accessing the website at Markify Tools, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.
+Permission is granted to temporarily download one copy of the materials (information or software) on Markify Tools' website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+- modify or copy the materials;
+- use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
+- attempt to decompile or reverse engineer any software contained on Markify Tools' website;
+- remove any copyright or other proprietary notations from the materials; or
+- transfer the materials to another person or "mirror" the materials on any other server.
+This license shall automatically terminate if you violate any of these restrictions and may be terminated by Markify Tools at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.`;
+
+export const DISCLAIMER = `Last updated: ${new Date().toLocaleDateString()}
+The materials on Markify Tools' website are provided on an 'as is' basis. Markify Tools makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+Further, Markify Tools does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+The tools provided on this website are for informational and educational purposes only. While we strive for accuracy, we cannot guarantee the results. Any reliance you place on such information is therefore strictly at your own risk.`;
