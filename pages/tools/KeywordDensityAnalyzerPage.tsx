@@ -25,18 +25,19 @@ const KeywordDensityAnalyzerPage: React.FC = () => {
         const words = text.toLowerCase().match(/\b(\w+)\b/g) || [];
         const totalWords = words.length;
         
-        // Fix: Add guard clause to prevent division by zero.
         if (totalWords === 0) {
             return { totalWords: 0, keywords: [] };
         }
-
-        // Fix: Explicitly type the generic for `reduce` to fix type inference issues.
-        const wordCounts = words.reduce<Record<string, number>>((acc, word) => {
+        
+        // FIX: Explicitly cast the initial value of the reduce accumulator to Record<string, number>.
+        // This ensures TypeScript correctly infers the type for `wordCounts`, resolving
+        // downstream errors where the `count` property was being inferred as `unknown`.
+        const wordCounts = words.reduce((acc, word) => {
             if (word.length >= minChars && !stopWords.has(word)) {
                 acc[word] = (acc[word] || 0) + 1;
             }
             return acc;
-        }, {});
+        }, {} as Record<string, number>);
 
         const keywords: KeywordData[] = Object.entries(wordCounts)
             .filter(([, count]) => count >= minCount)

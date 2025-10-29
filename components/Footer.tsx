@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-dark text-white pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Logo & About */}
           <div className="md:col-span-1">
              <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-white mb-4">
@@ -45,18 +45,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Column 4: Social Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              {FOOTER_LINKS.socialLinks.map((social) => (
-                <a key={social.name} href={social.path} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">

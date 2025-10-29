@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 
 const BlogSection: React.FC = () => {
+  // Show the 3 most recent posts on the homepage
+  const recentPosts = BLOG_POSTS.slice(-3).reverse();
+
   return (
     <section className="py-16 sm:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,13 +15,12 @@ const BlogSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {BLOG_POSTS.map((post) => (
-            <div key={post.title} className="bg-light rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover" />
+          {recentPosts.map((post) => (
+            <div key={post.slug} className="bg-light rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-dark">{post.title}</h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <Link to={post.link} className="font-semibold text-primary hover:underline">
+                <Link to={`/blog/${post.slug}`} className="font-semibold text-primary hover:underline">
                   Read More &rarr;
                 </Link>
               </div>
